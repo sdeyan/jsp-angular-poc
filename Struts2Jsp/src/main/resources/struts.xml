@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+
+		<action name="Home">
+			<result>views/addUser.jsp</result>
+		</action>
+
+		<action name="addUser" class="com.jcg.struts2.jsp.AddUserAction">
+			<result name="success">views/result.jsp</result>
+			<result name="redirect" type="redirect">http://localhost:4200/add</result>
+		</action>
+
+		<action name="receiveAddUserForm" class="com.jcg.struts2.jsp.ReceiveAddUserFormAction">
+			<result name="success">views/result.jsp</result>
+		</action>
+	</package>
+</struts>
